@@ -54,6 +54,16 @@
             background-color: #1877F2;
             border-radius: 50%;
         }
+
+        .logo2 {
+            position: absolute;
+            top: 550px; /* Logo 20px altında */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 40px;
+            border-radius: 50%;
+        }
 .input-container {
     position: absolute;
     top: 227px; /* Inputlar 20px altına yerleştirildi */
@@ -92,28 +102,27 @@
 
         .forgot-password {
             position: absolute;
-            top: 418px; /* Şifreni mi unuttun? yazısı */
+            top: 425px; /* Şifreni mi unuttun? yazısı */
             left: 50%;
             transform: translateX(-50%);
-            color: black;
+            color: #000000;
             font-size: 14px;
             text-decoration: underline;
             cursor: pointer;
             font-weight: 300;
             text-decoration: none;
         }
+
+
 .create-account {
     position: absolute;
-    top: 500px; /* Yeni hesap oluştur yazısı */
+    top: 500px; /* Giriş yap butonunun 100px altında */
     left: 50%;
-    transform: translateX(-50%);
-    border-top: 1px solid #b8d7df; /* Üst taraf */
-    border-left: 1px solid #4f7693; /* Sol taraf */
-    border-right: 1px solid #4f7693; /* Sağ taraf */
-    border-bottom: 1px solid #dbf5ff; /* Alt taraf */
+    transform: translateX(-50%); /* Yatayda ortalamak için */
+    border: 1.4px solid #b8d7df; /* Üst taraf */
     padding: 12px;
     border-radius: 30px;
-    width: 83%;
+    width: 290px;
     max-width: 400px;
     text-align: center;
     font-size: 16px;
@@ -124,6 +133,7 @@
     </style>
 </head>
 <body>
+  
 
     <div class="container">
         <!-- Android için Facebook yazısı -->
@@ -154,7 +164,11 @@
         
         <!-- Yeni hesap oluştur yazısı -->
         <div class="create-account">Yeni hesap oluştur</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Meta-Logo.png/1280px-Meta-Logo.png" class="logo2">
+
+        
     </div>
+    
 
 </body>
 </html>

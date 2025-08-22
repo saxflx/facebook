@@ -8,29 +8,31 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            overflow-x: hidden; /* Yatay kaydırmayı engeller */
+            height: 100vh; /* Sayfa yüksekliğini ekranın tamamına göre ayarlar */
         }
         .container {
             position: relative;
             width: 100%;
-            height: 100vh;
+            height: 100%; /* Yüksekliği %100 yapar */
             padding-top: 5px; /* Üstten 5px */
         }
         .facebook-logo {
             position: absolute;
-            top: 5px; /* Üstten 5px */
+            top: 17px; /* Üstten 5px */
             left: 2.5px; /* Soldan 2.5px */
-            right: 7.5px; /* Sağdan 7.5px */
+            right: 25px; /* Sağdan 7.5px */
             text-align: center;
-            font-size: 18px; /* Font boyutu */
+            font-size: 14px; /* Font boyutu */
             font-weight: normal;
             color: #1877F2;
         }
         .line {
             position: absolute;
-            top: 50px; /* Çizgi 50px'de */
+            top: 40px; /* Çizgi 50px'de */
             left: 0;
             right: 0;
-            height: 1px;
+            height: 0.5px;
             background-color: grey;
         }
         .turkish-text {
@@ -38,75 +40,87 @@
             top: 55px; /* Türkçe yazısı 5px altında */
             left: 50%;
             transform: translateX(-50%);
-            font-size: 18px;
-            font-weight: normal;
+            font-size: 15px;
+            color: gray;
+            font-weight: 100;
         }
         .logo {
             position: absolute;
-            top: 79px; /* Logo 20px altında */
+            top: 120px; /* Logo 20px altında */
             left: 50%;
             transform: translateX(-50%);
-            width: 100px;
-            height: 100px;
+            width: 60px;
+            height: 60px;
             background-color: #1877F2;
             border-radius: 50%;
         }
-        .input-container {
-            position: absolute;
-            top: 285px; /* Inputlar 20px altına yerleştirildi */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 400px;
-        }
-        .input-container input {
-            width: 100%;
-            padding: 12px;
-            margin: 5px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .login-button {
-            position: absolute;
-            top: 400px; /* Giriş yap butonu 20px aşağıda */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 400px;
-            background-color: #1877F2;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
+.input-container {
+    position: absolute;
+    top: 227px; /* Inputlar 20px altına yerleştirildi */
+    display: flex;           /* Flexbox düzenini etkinleştirir */
+    flex-direction: column;  /* Öğeleri dikeyde yerleştirir */
+    justify-content: center; /* Dikeyde ortalar */
+    align-items: center;     /* Yatayda ortalar */
+    width: 100%;             /* Container'ın tam genişliği */
+    padding: 20px 0;         /* Üst ve alt boşluk */
+}
+
+.input-container input {
+    width: 370px;            /* Sabit genişlik 400px */
+    padding: 13px;
+    margin: 5px 0;           /* Aralarındaki mesafeyi ayarlar */
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+.login-button {
+    position: absolute;
+    top: 365px; /* Giriş yap butonu 20px aşağıda */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;            /* Sabit genişlik 400px */
+    background-color: #1877F2;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 100px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 5px;         /* Butonun inputlardan sonra 5px mesafesi */
+}
+
         .forgot-password {
             position: absolute;
-            top: 180px; /* Şifreni mi unuttun? yazısı */
+            top: 418px; /* Şifreni mi unuttun? yazısı */
             left: 50%;
             transform: translateX(-50%);
             color: black;
             font-size: 14px;
             text-decoration: underline;
             cursor: pointer;
+            font-weight: 300;
+            text-decoration: none;
         }
-        .create-account {
-            position: absolute;
-            top: 200px; /* Yeni hesap oluştur yazısı */
-            left: 50%;
-            transform: translateX(-50%);
-            border: 1px solid #ddd;
-            padding: 12px;
-            border-radius: 30px;
-            width: 90%;
-            max-width: 400px;
-            text-align: center;
-            background-color: lightblue;
-            font-size: 16px;
-            cursor: pointer;
-        }
+.create-account {
+    position: absolute;
+    top: 500px; /* Yeni hesap oluştur yazısı */
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 1px solid #b8d7df; /* Üst taraf */
+    border-left: 1px solid #4f7693; /* Sol taraf */
+    border-right: 1px solid #4f7693; /* Sağ taraf */
+    border-bottom: 1px solid #dbf5ff; /* Alt taraf */
+    padding: 12px;
+    border-radius: 30px;
+    width: 83%;
+    max-width: 400px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    color: #0161e7;
+}
+
     </style>
 </head>
 <body>
@@ -122,13 +136,15 @@
         <div class="turkish-text">Türkçe</div>
         
         <!-- Logo -->
-        <div class="logo"></div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/960px-Facebook_Logo_%282019%29.png" class="logo"alt="Facebook Logo">
+
         
         <!-- Input alanları -->
-        <div class="input-container">
-            <input type="text" placeholder="Cep telefonu numarası veya e-posta">
-            <input type="password" placeholder="Şifre">
-        </div>
+  <div class="input-container">
+    <input type="text" placeholder="Cep telefonu numarası veya e-posta">
+    <input type="password" placeholder="Şifre">
+</div>
+
         
         <!-- Giriş yap butonu -->
         <button class="login-button">Giriş yap</button>

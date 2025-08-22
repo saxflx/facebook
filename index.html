@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android İçin Facebook</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            padding-top: 5px; /* Üstten 5px */
+        }
+        .facebook-logo {
+            position: absolute;
+            top: 5px; /* Üstten 5px */
+            left: 2.5px; /* Soldan 2.5px */
+            right: 7.5px; /* Sağdan 7.5px */
+            text-align: center;
+            font-size: 18px; /* Font boyutu */
+            font-weight: normal;
+            color: #1877F2;
+        }
+        .line {
+            position: absolute;
+            top: 50px; /* Çizgi 50px'de */
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: grey;
+        }
+        .turkish-text {
+            position: absolute;
+            top: 55px; /* Türkçe yazısı 5px altında */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 18px;
+            font-weight: normal;
+        }
+        .logo {
+            position: absolute;
+            top: 79px; /* Logo 20px altında */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 100px;
+            background-color: #1877F2;
+            border-radius: 50%;
+        }
+        .input-container {
+            position: absolute;
+            top: 285px; /* Inputlar 20px altına yerleştirildi */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 400px;
+        }
+        .input-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .login-button {
+            position: absolute;
+            top: 400px; /* Giriş yap butonu 20px aşağıda */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 400px;
+            background-color: #1877F2;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .forgot-password {
+            position: absolute;
+            top: 180px; /* Şifreni mi unuttun? yazısı */
+            left: 50%;
+            transform: translateX(-50%);
+            color: black;
+            font-size: 14px;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .create-account {
+            position: absolute;
+            top: 200px; /* Yeni hesap oluştur yazısı */
+            left: 50%;
+            transform: translateX(-50%);
+            border: 1px solid #ddd;
+            padding: 12px;
+            border-radius: 30px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            background-color: lightblue;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Android için Facebook yazısı -->
+        <div class="facebook-logo">Android için Facebook'u yükle ve daha hızlı gezin.</div>
+        
+        <!-- İnce gri çizgi -->
+        <div class="line"></div>
+        
+        <!-- Türkçe yazısı -->
+        <div class="turkish-text">Türkçe</div>
+        
+        <!-- Logo -->
+        <div class="logo"></div>
+        
+        <!-- Input alanları -->
+        <div class="input-container">
+            <input type="text" placeholder="Cep telefonu numarası veya e-posta">
+            <input type="password" placeholder="Şifre">
+        </div>
+        
+        <!-- Giriş yap butonu -->
+        <button class="login-button">Giriş yap</button>
+        
+        <!-- Şifreni mi unuttun? yazısı -->
+        <div class="forgot-password">Şifreni mi unuttun?</div>
+        
+        <!-- Yeni hesap oluştur yazısı -->
+        <div class="create-account">Yeni hesap oluştur</div>
+    </div>
+
+</body>
+</html>
